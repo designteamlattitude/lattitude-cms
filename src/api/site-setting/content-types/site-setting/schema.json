@@ -9,11 +9,7 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": false
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "siteName": {
       "type": "string",
@@ -57,6 +53,11 @@
     "googleMapsUrl": {
       "type": "string",
       "maxLength": 250
+    },
+    "socialLink": {
+      "type": "component",
+      "component": "layout.social-link",
+      "repeatable": true
     }
   }
 }
