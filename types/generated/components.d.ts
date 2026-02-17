@@ -1,5 +1,24 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ContentBrandSpecialty extends Struct.ComponentSchema {
+  collectionName: 'components_content_brand_specialties';
+  info: {
+    displayName: 'brand-specialty';
+  };
+  attributes: {
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+  };
+}
+
 export interface LayoutSocialLink extends Struct.ComponentSchema {
   collectionName: 'components_layout_social_links';
   info: {
@@ -32,6 +51,78 @@ export interface LayoutSocialLink extends Struct.ComponentSchema {
   };
 }
 
+export interface ProductFaqItem extends Struct.ComponentSchema {
+  collectionName: 'components_product_faq_items';
+  info: {
+    displayName: 'faq-Item';
+  };
+  attributes: {
+    answer: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    question: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+  };
+}
+
+export interface ProductTechnicalFeature extends Struct.ComponentSchema {
+  collectionName: 'components_product_technical_features';
+  info: {
+    displayName: 'technical-feature';
+  };
+  attributes: {
+    description: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+    feature: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+  };
+}
+
+export interface ProductTechnicalSheet extends Struct.ComponentSchema {
+  collectionName: 'components_product_technical_sheets';
+  info: {
+    displayName: 'technical-sheet';
+  };
+  attributes: {
+    groupTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 60;
+      }>;
+    technicalFeature: Schema.Attribute.Component<
+      'product.technical-feature',
+      true
+    >;
+  };
+}
+
+export interface ProductTechnicalSpecifications extends Struct.ComponentSchema {
+  collectionName: 'components_product_technical_specifications';
+  info: {
+    displayName: 'technical-Specifications';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 120;
+      }>;
+  };
+}
+
 export interface SeoSeo extends Struct.ComponentSchema {
   collectionName: 'components_seo_seos';
   info: {
@@ -56,7 +147,12 @@ export interface SeoSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'content.brand-specialty': ContentBrandSpecialty;
       'layout.social-link': LayoutSocialLink;
+      'product.faq-item': ProductFaqItem;
+      'product.technical-feature': ProductTechnicalFeature;
+      'product.technical-sheet': ProductTechnicalSheet;
+      'product.technical-specifications': ProductTechnicalSpecifications;
       'seo.seo': SeoSeo;
     }
   }
