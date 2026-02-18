@@ -576,6 +576,11 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 120;
+      }>;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
     relatedConsumables: Schema.Attribute.Relation<
@@ -595,7 +600,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 25;
       }>;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID & Schema.Attribute.Required;
     subcategories: Schema.Attribute.Relation<
       'manyToOne',
       'api::subcategory.subcategory'
@@ -605,11 +610,6 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'product.technical-specifications',
       true
     >;
-    title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 120;
-      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-18T00:56:13.933Z"
+    "x-generation-date": "2026-02-18T17:20:47.783Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -5327,7 +5327,7 @@
                 "documentId": {
                   "type": "string"
                 },
-                "title": {
+                "name": {
                   "type": "string"
                 },
                 "slug": {
@@ -10147,7 +10147,7 @@
                       "documentId": {
                         "type": "string"
                       },
-                      "title": {
+                      "name": {
                         "type": "string"
                       },
                       "slug": {
@@ -11438,7 +11438,7 @@
         "properties": {
           "data": {
             "required": [
-              "title",
+              "name",
               "slug",
               "shortDescription",
               "description",
@@ -11447,7 +11447,7 @@
             ],
             "type": "object",
             "properties": {
-              "title": {
+              "name": {
                 "type": "string"
               },
               "slug": {
@@ -11658,7 +11658,7 @@
       "Product": {
         "type": "object",
         "required": [
-          "title",
+          "name",
           "slug",
           "shortDescription",
           "description",
@@ -11679,7 +11679,7 @@
           "documentId": {
             "type": "string"
           },
-          "title": {
+          "name": {
             "type": "string"
           },
           "slug": {
@@ -12998,7 +12998,7 @@
                 "documentId": {
                   "type": "string"
                 },
-                "title": {
+                "name": {
                   "type": "string"
                 },
                 "slug": {
@@ -19699,7 +19699,7 @@
                           "documentId": {
                             "type": "string"
                           },
-                          "title": {
+                          "name": {
                             "type": "string"
                           },
                           "slug": {
