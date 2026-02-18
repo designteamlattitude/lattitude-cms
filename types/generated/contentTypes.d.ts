@@ -633,11 +633,6 @@ export interface ApiPurchaseBenefitPurchaseBenefit
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: false;
-    };
-  };
   attributes: {
     benefit: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -652,7 +647,7 @@ export interface ApiPurchaseBenefitPurchaseBenefit
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
-    icon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
