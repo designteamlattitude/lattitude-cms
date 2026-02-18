@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-02-18T17:25:14.345Z"
+    "x-generation-date": "2026-02-18T17:27:20.852Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6629,7 +6629,7 @@
                         "heroDescription": {
                           "type": "string"
                         },
-                        "navImage": {
+                        "figure": {
                           "type": "object",
                           "properties": {
                             "id": {
@@ -6800,7 +6800,7 @@
                             }
                           }
                         },
-                        "Order": {
+                        "order": {
                           "type": "integer"
                         },
                         "isActive": {
@@ -7951,7 +7951,6 @@
               "shortDescription",
               "heroImage",
               "heroDescription",
-              "navImage",
               "isActive"
             ],
             "type": "object",
@@ -7990,7 +7989,7 @@
               "heroDescription": {
                 "type": "string"
               },
-              "navImage": {
+              "figure": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -8001,7 +8000,7 @@
                 ],
                 "example": "string or id"
               },
-              "Order": {
+              "order": {
                 "type": "integer"
               },
               "isActive": {
@@ -8089,7 +8088,6 @@
           "shortDescription",
           "heroImage",
           "heroDescription",
-          "navImage",
           "isActive"
         ],
         "properties": {
@@ -9097,7 +9095,7 @@
           "heroDescription": {
             "type": "string"
           },
-          "navImage": {
+          "figure": {
             "type": "object",
             "properties": {
               "id": {
@@ -9268,7 +9266,7 @@
               }
             }
           },
-          "Order": {
+          "order": {
             "type": "integer"
           },
           "isActive": {
@@ -9854,7 +9852,7 @@
                     "heroDescription": {
                       "type": "string"
                     },
-                    "navImage": {
+                    "figure": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -10025,7 +10023,7 @@
                         }
                       }
                     },
-                    "Order": {
+                    "order": {
                       "type": "integer"
                     },
                     "isActive": {
@@ -14051,7 +14049,7 @@
                         "heroDescription": {
                           "type": "string"
                         },
-                        "navImage": {
+                        "figure": {
                           "type": "object",
                           "properties": {
                             "id": {
@@ -14222,7 +14220,7 @@
                             }
                           }
                         },
-                        "Order": {
+                        "order": {
                           "type": "integer"
                         },
                         "isActive": {
@@ -19276,7 +19274,7 @@
               "heroDescription": {
                 "type": "string"
               },
-              "navImage": {
+              "figure": {
                 "type": "object",
                 "properties": {
                   "id": {
@@ -19447,7 +19445,7 @@
                   }
                 }
               },
-              "Order": {
+              "order": {
                 "type": "integer"
               },
               "isActive": {

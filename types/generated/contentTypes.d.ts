@@ -495,6 +495,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    figure: Schema.Attribute.Media<'images'>;
     heroDescription: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -516,8 +517,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
-    navImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    Order: Schema.Attribute.Integer;
+    order: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     SEO: Schema.Attribute.Component<'seo.seo', false>;
     shortDescription: Schema.Attribute.String &
