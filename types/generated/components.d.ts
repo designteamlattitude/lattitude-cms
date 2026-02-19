@@ -76,11 +76,7 @@ export interface ProductTechnicalFeature extends Struct.ComponentSchema {
     displayName: 'technical-feature';
   };
   attributes: {
-    description: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
-      }>;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
     feature: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
