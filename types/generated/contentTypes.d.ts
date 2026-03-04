@@ -476,7 +476,7 @@ export interface ApiBlogArticuleBlogArticule
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
-    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'mainTitle'>;
     subcategory: Schema.Attribute.Relation<
       'manyToOne',
       'api::subcategory.subcategory'
@@ -973,7 +973,7 @@ export interface ApiWriterWriter extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
-    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'fullName'>;
     specialty: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

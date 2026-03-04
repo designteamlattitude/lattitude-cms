@@ -17,8 +17,8 @@
       "required": true
     },
     "slug": {
-      "type": "string",
-      "required": true
+      "type": "uid",
+      "targetField": "fullName"
     },
     "shortDescription": {
       "type": "string",
