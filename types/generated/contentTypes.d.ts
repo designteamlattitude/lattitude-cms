@@ -959,6 +959,55 @@ export interface ApiSubcategorySubcategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTestimonyTestimony extends Struct.CollectionTypeSchema {
+  collectionName: 'testimonials';
+  info: {
+    displayName: 'Testimonios';
+    pluralName: 'testimonials';
+    singularName: 'testimony';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    avatar: Schema.Attribute.Media<'images'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    isActive: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::testimony.testimony'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+    name: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 80;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    role: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    testimonial: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiWriterWriter extends Struct.CollectionTypeSchema {
   collectionName: 'writers';
   info: {
@@ -1528,6 +1577,7 @@ declare module '@strapi/strapi' {
       'api::purchase-benefit.purchase-benefit': ApiPurchaseBenefitPurchaseBenefit;
       'api::site-setting.site-setting': ApiSiteSettingSiteSetting;
       'api::subcategory.subcategory': ApiSubcategorySubcategory;
+      'api::testimony.testimony': ApiTestimonyTestimony;
       'api::writer.writer': ApiWriterWriter;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

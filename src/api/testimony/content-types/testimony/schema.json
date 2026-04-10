@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimony",
+    "pluralName": "testimonials",
+    "displayName": "Testimonios"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 80,
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "location": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "testimonial": {
+      "type": "string",
+      "maxLength": 250,
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  }
+}
