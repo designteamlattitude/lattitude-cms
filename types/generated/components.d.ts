@@ -163,7 +163,6 @@ export interface LayoutSocialLink extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
-    order: Schema.Attribute.Integer;
     url: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

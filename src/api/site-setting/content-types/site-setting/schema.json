@@ -29,14 +29,6 @@
         "images"
       ]
     },
-    "favicon": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "whatsappNumber": {
       "type": "string"
     },
@@ -46,18 +38,64 @@
     "businessHours": {
       "type": "string"
     },
+    "email": {
+      "type": "email"
+    },
     "address": {
       "type": "string",
       "maxLength": 250
     },
     "googleMapsUrl": {
-      "type": "string",
+      "type": "text",
       "maxLength": 250
+    },
+    "faviconIco": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "favicon16x16": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "favicon32x32": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "favicon512x512": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "faviconApple180x180": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "socialLink": {
       "type": "component",
       "component": "layout.social-link",
       "repeatable": true
+    },
+    "googleMapsUrlIframe": {
+      "type": "text"
+    },
+    "seoTextPLP": {
+      "type": "blocks",
+      "required": true
     }
   }
 }

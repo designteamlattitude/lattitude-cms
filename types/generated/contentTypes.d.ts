@@ -879,11 +879,17 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    favicon: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    googleMapsUrl: Schema.Attribute.String &
+    email: Schema.Attribute.Email;
+    favicon16x16: Schema.Attribute.Media<'images'>;
+    favicon32x32: Schema.Attribute.Media<'images'>;
+    favicon512x512: Schema.Attribute.Media<'images'>;
+    faviconApple180x180: Schema.Attribute.Media<'images'>;
+    faviconIco: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    googleMapsUrl: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 250;
       }>;
+    googleMapsUrlIframe: Schema.Attribute.Text;
     legalName: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
@@ -897,6 +903,7 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
+    seoTextPLP: Schema.Attribute.Blocks & Schema.Attribute.Required;
     siteName: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

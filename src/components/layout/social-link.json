@@ -27,9 +27,6 @@
         "whatsapp"
       ]
     },
-    "order": {
-      "type": "integer"
-    },
     "isActive": {
       "type": "boolean",
       "default": true
