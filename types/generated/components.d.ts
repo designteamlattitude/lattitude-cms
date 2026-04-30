@@ -152,7 +152,7 @@ export interface ContentSlider extends Struct.ComponentSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<true>;
     mobileImage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    url: Schema.Attribute.String &
+    url: Schema.Attribute.Text &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'/'>;
   };
