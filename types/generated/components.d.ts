@@ -136,7 +136,6 @@ export interface ContentInterstitialCards extends Struct.ComponentSchema {
     SEO: Schema.Attribute.Component<'seo.seo', false>;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 120;
       }>;
