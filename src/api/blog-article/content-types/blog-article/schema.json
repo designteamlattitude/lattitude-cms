@@ -38,13 +38,12 @@
       ]
     },
     "iframeHeroVideoYoutube": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "files",
-        "videos"
-      ]
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "isActive": {
       "type": "boolean",

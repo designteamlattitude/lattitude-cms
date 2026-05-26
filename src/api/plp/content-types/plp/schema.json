@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "plps",
+  "info": {
+    "singularName": "plp",
+    "pluralName": "plps",
+    "displayName": "Página PLP"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroImageDesktop": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroImageMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

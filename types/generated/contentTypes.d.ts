@@ -496,7 +496,12 @@ export interface ApiBlogArticleBlogArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     heroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
-    iframeHeroVideoYoutube: Schema.Attribute.Media<'files' | 'videos'>;
+    iframeHeroVideoYoutube: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     isActive: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<true>;
@@ -786,6 +791,34 @@ export interface ApiLegalContentLegalContent extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::legal-content.legal-content'
     >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPlpPlp extends Struct.SingleTypeSchema {
+  collectionName: 'plps';
+  info: {
+    displayName: 'P\u00E1gina PLP';
+    pluralName: 'plps';
+    singularName: 'plp';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroImageDesktop: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required;
+    heroImageMobile: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::plp.plp'> &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1698,6 +1731,7 @@ declare module '@strapi/strapi' {
       'api::events-page.events-page': ApiEventsPageEventsPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::legal-content.legal-content': ApiLegalContentLegalContent;
+      'api::plp.plp': ApiPlpPlp;
       'api::product.product': ApiProductProduct;
       'api::promo-slider.promo-slider': ApiPromoSliderPromoSlider;
       'api::purchase-benefit.purchase-benefit': ApiPurchaseBenefitPurchaseBenefit;
