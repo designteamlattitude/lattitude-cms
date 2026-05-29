@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2026-05-26T00:42:26.327Z"
+    "x-generation-date": "2026-05-29T02:29:17.982Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -12142,7 +12142,8 @@
               "slug",
               "logo",
               "title",
-              "interstitialLogo"
+              "interstitialLogo",
+              "isActive"
             ],
             "type": "object",
             "properties": {
@@ -12238,6 +12239,9 @@
                   "example": "string or id"
                 }
               },
+              "isActive": {
+                "type": "boolean"
+              },
               "locale": {
                 "type": "string"
               },
@@ -12301,7 +12305,8 @@
           "slug",
           "logo",
           "title",
-          "interstitialLogo"
+          "interstitialLogo",
+          "isActive"
         ],
         "properties": {
           "id": {
@@ -15451,6 +15456,9 @@
                         }
                       }
                     },
+                    "isActive": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -15809,6 +15817,9 @@
                 }
               }
             }
+          },
+          "isActive": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -20361,6 +20372,9 @@
                                 }
                               }
                             }
+                          },
+                          "isActive": {
+                            "type": "boolean"
                           },
                           "createdAt": {
                             "type": "string",
@@ -28615,6 +28629,9 @@
                           }
                         }
                       }
+                    },
+                    "isActive": {
+                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -37940,6 +37957,9 @@
                                     }
                                   }
                                 }
+                              },
+                              "isActive": {
+                                "type": "boolean"
                               },
                               "createdAt": {
                                 "type": "string",

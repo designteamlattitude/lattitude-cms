@@ -599,6 +599,14 @@ export interface ApiBrandBrand extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
+    isActive: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'>;
     logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
