@@ -37,11 +37,11 @@
         "files"
       ]
     },
-    "iframeHeroVideoYoutube": {
+    "iframeHeroVideo": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       }
     },

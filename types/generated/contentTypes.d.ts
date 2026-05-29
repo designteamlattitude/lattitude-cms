@@ -496,10 +496,10 @@ export interface ApiBlogArticleBlogArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     heroImage: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
-    iframeHeroVideoYoutube: Schema.Attribute.Text &
+    iframeHeroVideo: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     isActive: Schema.Attribute.Boolean &
@@ -600,7 +600,6 @@ export interface ApiBrandBrand extends Struct.CollectionTypeSchema {
         };
       }>;
     isActive: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
