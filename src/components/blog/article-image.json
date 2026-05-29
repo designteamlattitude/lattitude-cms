@@ -14,8 +14,8 @@
         "files"
       ]
     },
-    "iframeVideoYoutube": {
-      "type": "string"
+    "iframeVideo": {
+      "type": "text"
     }
   },
   "config": {}

@@ -17,7 +17,7 @@ export interface BlogArticleImage extends Struct.ComponentSchema {
   };
   attributes: {
     articleImage: Schema.Attribute.Media<'images' | 'files'>;
-    iframeVideoYoutube: Schema.Attribute.String;
+    iframeVideo: Schema.Attribute.Text;
   };
 }
 
