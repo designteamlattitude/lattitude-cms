@@ -600,6 +600,7 @@ export interface ApiBrandBrand extends Struct.CollectionTypeSchema {
         };
       }>;
     isActive: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

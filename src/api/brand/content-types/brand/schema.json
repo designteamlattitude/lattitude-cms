@@ -126,7 +126,7 @@
           "localized": true
         }
       },
-      "required": false,
+      "required": true,
       "default": true
     }
   }
