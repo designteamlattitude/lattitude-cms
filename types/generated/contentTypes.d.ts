@@ -963,6 +963,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'product.technical-specifications',
       true
     >;
+    testimonial: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::testimony.testimony'
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1213,6 +1217,7 @@ export interface ApiTestimonyTestimony extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 80;
       }>;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     role: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
