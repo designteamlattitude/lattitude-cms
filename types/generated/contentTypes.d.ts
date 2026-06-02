@@ -464,6 +464,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     Description: Schema.Attribute.Text;
     imageHero: Schema.Attribute.Media<'images'>;
+    leftImage: Schema.Attribute.Media<'images'>;
     leftText: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &

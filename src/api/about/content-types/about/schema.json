@@ -78,6 +78,13 @@
     },
     "values": {
       "type": "text"
+    },
+    "leftImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
