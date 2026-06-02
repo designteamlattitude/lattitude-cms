@@ -430,6 +430,62 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutAbout extends Struct.SingleTypeSchema {
+  collectionName: 'aboutus';
+  info: {
+    displayName: 'P\u00E1gina Acerca de nosotros';
+    pluralName: 'aboutus';
+    singularName: 'about';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefitDescriptionA: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    benefitDescriptionB: Schema.Attribute.String;
+    benefitDescriptionC: Schema.Attribute.String;
+    benefitDescriptionD: Schema.Attribute.String;
+    benefitDescriptionE: Schema.Attribute.String;
+    benefitsDescription: Schema.Attribute.Text;
+    benefitsTitle: Schema.Attribute.String;
+    benefitTitleA: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 200;
+      }>;
+    benefitTitleB: Schema.Attribute.String;
+    benefitTitleC: Schema.Attribute.String;
+    benefitTitleD: Schema.Attribute.String;
+    benefitTitleE: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    imageHero: Schema.Attribute.Media<'images'>;
+    leftText: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
+      Schema.Attribute.Private;
+    mission: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    rightText: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 100;
+      }>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 250;
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    values: Schema.Attribute.Text;
+  };
+}
+
 export interface ApiArticleClassificationArticleClassification
   extends Struct.CollectionTypeSchema {
   collectionName: 'article_classifications';
@@ -1732,6 +1788,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about.about': ApiAboutAbout;
       'api::article-classification.article-classification': ApiArticleClassificationArticleClassification;
       'api::blog-article.blog-article': ApiBlogArticleBlogArticle;
       'api::brand.brand': ApiBrandBrand;

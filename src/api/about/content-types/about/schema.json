@@ -1,0 +1,83 @@
+{
+  "kind": "singleType",
+  "collectionName": "aboutus",
+  "info": {
+    "singularName": "about",
+    "pluralName": "aboutus",
+    "displayName": "Página Acerca de nosotros"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "Description": {
+      "type": "text"
+    },
+    "imageHero": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "subtitle": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "leftText": {
+      "type": "string"
+    },
+    "rightText": {
+      "type": "string"
+    },
+    "benefitsTitle": {
+      "type": "string"
+    },
+    "benefitsDescription": {
+      "type": "text"
+    },
+    "benefitTitleA": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "benefitDescriptionA": {
+      "type": "string",
+      "maxLength": 250
+    },
+    "benefitTitleB": {
+      "type": "string"
+    },
+    "benefitDescriptionB": {
+      "type": "string"
+    },
+    "benefitTitleC": {
+      "type": "string"
+    },
+    "benefitDescriptionC": {
+      "type": "string"
+    },
+    "benefitTitleD": {
+      "type": "string"
+    },
+    "benefitDescriptionD": {
+      "type": "string"
+    },
+    "benefitTitleE": {
+      "type": "string"
+    },
+    "benefitDescriptionE": {
+      "type": "string"
+    },
+    "mission": {
+      "type": "text"
+    },
+    "values": {
+      "type": "text"
+    }
+  }
+}
