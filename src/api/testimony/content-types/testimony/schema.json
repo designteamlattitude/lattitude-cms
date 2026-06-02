@@ -45,6 +45,12 @@
       "type": "boolean",
       "required": true,
       "default": true
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "testimonial"
     }
   }
 }

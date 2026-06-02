@@ -109,6 +109,12 @@
       "relation": "manyToOne",
       "target": "api::brand.brand",
       "inversedBy": "products"
+    },
+    "testimonial": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::testimony.testimony",
+      "inversedBy": "products"
     }
   }
 }
